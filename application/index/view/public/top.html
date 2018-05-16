@@ -1,14 +1,22 @@
 <div class="layui-header">
     <ul class="layui-nav layui-layout-left">
-        <li class="layui-nav-item layadmin-flexible" lay-unselect>
-            <a href="javascript:" layadmin-event="flexible" title="侧边伸缩">
+        <li 
+            class="layui-nav-item layadmin-flexible menu-effect-btn" 
+            lay-unselect
+            onclick="adminVm.menuEffect()"
+        >
+            <span layadmin-event="flexible" title="侧边伸缩">
                 <i class="layui-icon layui-icon-shrink-right"></i>
-            </a>
+            </span>
         </li>
-        <li class="layui-nav-item" lay-unselect>
-            <a href="javascript:" layadmin-event="refresh" title="刷新">
+        <li 
+            class="layui-nav-item" 
+            lay-unselect 
+            onclick="adminVm.reloadFrame()"
+        >
+            <span layadmin-event="refresh" title="刷新">
                 <i class="layui-icon layui-icon-refresh-3"></i>
-            </a>
+            </span>
         </li>
     </ul>
 
@@ -40,7 +48,9 @@
             </dl>
         </li>
         <li class="layui-nav-item layui-hide-xs" lay-unselect="">
-            <a href="javascript:;" layadmin-event="about"><i class="layui-icon layui-icon-more-vertical"></i></a>
+            <a href="javascript:;" layadmin-event="about">
+                <i class="layui-icon layui-icon-more-vertical"></i>
+            </a>
         </li>
     </ul>
 </div>
