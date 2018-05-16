@@ -7,7 +7,23 @@ use think\View;
 class Demo extends Controller {
 
     public function index() {
-        return 'test';
+        return $this->fetch('index');
+    }
+
+    public function index1() {
+        return $this->fetch();
+    }
+
+    public function index2() {
+        return $this->fetch();
+    }
+
+    public function index3() {
+        return $this->fetch();
+    }
+
+    public function index4() {
+        return $this->fetch();
     }
 
     public function test() {
@@ -33,6 +49,6 @@ class Demo extends Controller {
     public function view() {
         // dump(\Config::get());
         $this->assign('name','thinkphp');
-        return $this->fetch('index');
+        return $this->fetch('view');
     }
 }

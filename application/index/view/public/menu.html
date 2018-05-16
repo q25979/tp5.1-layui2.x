@@ -1,0 +1,42 @@
+{load href="__STATIC__/index/css/menu.css" /}
+
+<div class="layui-side layui-side-menu">
+    <div class="layui-side-scroll">
+        <div class="layui-logo" lay-href="home/con/html">
+            <span>logo</span>
+        </div>
+    
+        <ul 
+            class="layui-nav layui-nav-tree" 
+            lay-shrink="all" 
+            lay-filter="layadmin-system-side-menu" 
+            id="admin-menu"
+        >
+            <li class="layui-nav-item" v-for="item in menu">
+                <a href="javascript:" lay-direction="2">
+                    <i
+                        style="margin-top: -21px;"
+                        class="layui-icon" 
+                        :class="item.icon"
+                    ></i>
+                    <cite>{{ item.title }}</cite>
+                    <span class="layui-nav-more"></span>
+                </a>
+                <dl class="layui-nav-child">
+                    <dd v-for="item in item.child">
+                        <a 
+                            :lay-href  = "item.link"
+                            v-on:click = "adminVm.menuEv(item)"
+                        >
+                            {{ item.title }}
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- js渲染菜单 -->
+{load href="__STATIC__/index/js/menu.js" /}
+
