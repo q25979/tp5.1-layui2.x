@@ -13,7 +13,11 @@
             id="admin-menu"
         >
             <li class="layui-nav-item" v-for="item in menu">
-                <a href="javascript:" lay-direction="2">
+                <a 
+                    href="javascript:" 
+                    lay-direction="2" 
+                    onfocus="this.blur();"
+                >
                     <i
                         style="margin-top: -21px;"
                         class="layui-icon" 
@@ -27,6 +31,7 @@
                         <a 
                             :lay-href  = "item.link"
                             v-on:click = "adminVm.menuEv(item)"
+                            onfocus="this.blur();"
                         >
                             {{ item.title }}
                         </a>

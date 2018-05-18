@@ -1,7 +1,7 @@
 <?php
 namespace app\index\controller;
 
-class Index {
+class Index extends Validate {
 
     public function index() {
         $request = request();
